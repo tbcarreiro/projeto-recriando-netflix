@@ -1,0 +1,123 @@
+:root{
+    --vermelho: #e50914;
+    --preto: #141414; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preto);
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    background-size: contain;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color:#e50914 ;
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+header nav a{
+    text-decoration: none;
+    color:#AAA ;
+    margin-right: 10px;
+}
+header nav a:hover{
+    color: #fff;
+}
+
+/* Elementos filme principal */
+
+.filme-principal{
+    transition: 0.3s ease all;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../img/capa00.jpg");
+    background-size: cover;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start ;
+}
+.container{
+    margin-left: 30px;
+}
+.filme-principal .container{
+    width: 70%;
+}
+.titulo{
+    font-size: 40px;
+    font-family: 'Trebuchet';
+    margin-bottom: 10px;
+}
+.descricao{
+    margin-bottom: 80px;
+    font-size: 18px;;
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+}
+.botao{
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    width: 240px;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Carrossel */
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display:block;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
+
+
+/* Responsividade */
+
+@media screen and (max-width: 640px) {
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .filme-principal{
+        background-position:-7rem;    }
+    .botoes{
+        flex-direction: column;
+    }
+    .botao{
+        margin-top: 5px;
+    }
+}
+
+@media screen and (min-width:640px) {
+    .descricao{
+        width: 60%;
+    }
+}
